@@ -24,10 +24,10 @@ body {
 
 .center {
   background-color: white;
+  position: fixed;
   left: 15%;
   right: 15%;
   height: 100%;
-  overflow-y: scroll;
 }
 
 img {
