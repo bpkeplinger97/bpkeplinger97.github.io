@@ -20,6 +20,7 @@ body {
   /*background-color: #0e89ed;
   background-image: url("../../media/ourflag.png");*/
   background-size:cover;
+  overflow-y: auto;
 }
 
 .center {
