@@ -27,9 +27,9 @@ body {
 .center {
   background-color: white;
   position: relative;
-  left: 7.5%;
-  right: 7.5%;
-  width: 85%;
+  left: 15%;
+  right: 15%;
+  width: 70%;
   height: 100%;
 }
 
