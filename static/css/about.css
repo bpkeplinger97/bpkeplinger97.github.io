@@ -44,12 +44,11 @@ img {
 }
 
 .backgroundimg {
-  margin: auto;
  margin-top: 50px;
  height: 100%;
  /*box-shadow: 10px 10px 7px #888888;*/
  /*border: 3px solid #888889;*/
  border-radius: 1px;
- position: fixed;
+ position: absolute;
  z-index: -1;
 }
