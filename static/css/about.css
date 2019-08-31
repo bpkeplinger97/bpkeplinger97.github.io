@@ -16,6 +16,7 @@ h1 {
 
 body {
   margin-top: 0px;
+  background-image: url("ourflag.png");
   /*background-color: #0e89ed;
   background-image: url("../../media/ourflag.png");*/
   background-size:cover;
@@ -43,8 +44,6 @@ img {
 }
 
 .backgroundimg {
-
-  background-image: url("ourflag.png");
   margin: auto;
  margin-top: 50px;
  height: 100%;
