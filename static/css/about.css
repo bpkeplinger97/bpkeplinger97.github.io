@@ -33,3 +33,13 @@ body {
   right: 15%;
   width: 70%;
 }
+
+.selfie {
+  display: block;
+  border:2px solid #021a40;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  z-index: 5;
+}
