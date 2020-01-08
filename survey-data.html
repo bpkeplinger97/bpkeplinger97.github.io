@@ -1,0 +1,1158 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+  		<!-- amCharts javascript sources -->
+  		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+  		<script type="text/javascript" src="https://www.amcharts.com/lib/3/pie.js"></script>
+      <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+  		<script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+  		<!-- amCharts javascript code -->
+  		<script type="text/javascript">
+  			AmCharts.makeChart("region_chart",
+  				{
+            "type": "pie",
+  					"balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+  					"startAngle": 18,
+  					"groupedAlpha": 0,
+  					"pullOutDuration": 0,
+  					"sequencedAnimation": false,
+  					"startDuration": 0,
+  					"titleField": "category",
+  					"valueField": "column-1",
+  					"theme": "light",
+  					"allLabels": [],
+  					"balloon": {},
+  					"legend": {
+  						"enabled": true,
+  						"align": "center",
+  						"markerType": "circle"
+  					},
+  					"titles": [
+  						{
+  							"id": "Regional Response",
+  							"size": 18,
+  							"text": "Survey Response by Region"
+  						}
+  					],
+  					"dataProvider": [
+  						{
+  							"category": "North America",
+  							"column-1": "2217"
+  						},
+  						{
+  							"category": "EU-West",
+  							"column-1": "1423"
+  						},
+  						{
+  							"category": "EU-Nordic-East",
+  							"column-1": "463"
+  						},
+  						{
+  							"category": "Oceania",
+  							"column-1": "163"
+  						},
+  						{
+  							"category": "Garena",
+  							"column-1": "125"
+  						},
+  						{
+  							"category": "Brazil",
+  							"column-1": "113"
+  						},
+  						{
+  							"category": "Latin America South",
+  							"column-1": "90"
+  						},
+  						{
+  							"category": "Latin America North",
+  							"column-1": "55"
+  						},
+  						{
+  							"category": "Turkey",
+  							"column-1": "26"
+  						},
+  						{
+  							"category": "Russia",
+  							"column-1": "13"
+  						},
+  						{
+  							"category": "Korea",
+  							"column-1": "7"
+  						},
+  						{
+  							"category": "China",
+  							"column-1": "4"
+  						},
+  						{
+  							"category": "Japan",
+  							"column-1": "2"
+  						}
+  					]
+  				}
+  			);
+  		</script>
+      <script type="text/javascript">
+        AmCharts.makeChart("aggro_chart",
+          {
+            "type": "pie",
+            "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+            "startAngle": 43.2,
+            "groupPercent": -13,
+            "maxLabelWidth": 198,
+            "startDuration": 0,
+            "titleField": "category",
+            "valueField": "column-1",
+            "theme": "light",
+            "allLabels": [],
+            "balloon": {},
+            "legend": {
+              "enabled": true,
+              "align": "center",
+              "markerType": "circle"
+            },
+            "titles": [
+              {
+                "id": "Title-1",
+                "size": 18,
+                "text": "Aggression Map"
+              },
+          		{
+          			"id": "Title-2",
+          			"size": 12,
+          			"text": "Higher Indicates a More Aggressive Player"
+          		}
+            ],
+            "dataProvider": [
+              {
+                "category": "One",
+                "column-1": "57"
+              },
+              {
+                "category": "Two",
+                "column-1": "531"
+              },
+              {
+                "category": "Three",
+                "column-1": "1283"
+              },
+              {
+                "category": "Four",
+                "column-1": "1907"
+              },
+              {
+                "category": "Five",
+                "column-1": "923"
+              }
+            ]
+          }
+        );
+      </script>
+      <script type="text/javascript">
+			AmCharts.makeChart("champ_pick",
+				{
+					"type": "serial",
+					"categoryField": "category",
+					"columnWidth": 0.25,
+					"theme": "light",
+					"categoryAxis": {
+						"gridPosition": "start"
+					},
+					"chartCursor": {
+						"enabled": true
+					},
+					"chartScrollbar": {
+						"enabled": true,
+						"hideResizeGrips": false
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"fillAlphas": 1,
+							"id": "AmGraph-1",
+							"title": "graph 1",
+							"type": "column",
+							"valueField": "column-1"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"title": "Total Picks"
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"titles": [
+						{
+							"id": "Title-1",
+							"size": 18,
+							"text": "Total Picks as Primary Champions"
+						}
+					],
+					"dataProvider": [
+						{
+							"category": "Aatrox",
+							"column-1": "48"
+						},
+						{
+							"category": "Ahri",
+							"column-1": "64"
+						},
+						{
+							"category": "Akali",
+							"column-1": "62"
+						},
+						{
+							"category": "Alistar",
+							"column-1": "14"
+						},
+						{
+							"category": "Amumu",
+							"column-1": "14"
+						},
+						{
+							"category": "Anivia",
+							"column-1": "19"
+						},
+						{
+							"category": "Annie",
+							"column-1": "16"
+						},
+						{
+							"category": "Aphelios",
+							"column-1": "26"
+						},
+						{
+							"category": "Ashe",
+							"column-1": "19"
+						},
+						{
+							"category": "Aurelion Sol",
+							"column-1": "25"
+						},
+						{
+							"category": "Azir",
+							"column-1": "34"
+						},
+						{
+							"category": "Bard",
+							"column-1": "53"
+						},
+						{
+							"category": "Blitzcrank",
+							"column-1": "6"
+						},
+						{
+							"category": "Brand",
+							"column-1": "24"
+						},
+						{
+							"category": "Braum",
+							"column-1": "7"
+						},
+						{
+							"category": "Caitlyn",
+							"column-1": "63"
+						},
+						{
+							"category": "Camille",
+							"column-1": "53"
+						},
+						{
+							"category": "Cassiopeia",
+							"column-1": "17"
+						},
+						{
+							"category": "Cho'Gath",
+							"column-1": "18"
+						},
+						{
+							"category": "Corki",
+							"column-1": "5"
+						},
+						{
+							"category": "Darius",
+							"column-1": "82"
+						},
+						{
+							"category": "Diana",
+							"column-1": "38"
+						},
+						{
+							"category": "Dr. Mundo",
+							"column-1": "21"
+						},
+						{
+							"category": "Draven",
+							"column-1": "32"
+						},
+						{
+							"category": "Ekko",
+							"column-1": "43"
+						},
+						{
+							"category": "Elise",
+							"column-1": "15"
+						},
+						{
+							"category": "Evelynn",
+							"column-1": "34"
+						},
+						{
+							"category": "Ezreal",
+							"column-1": "34"
+						},
+						{
+							"category": "Fiddlesticks",
+							"column-1": "16"
+						},
+						{
+							"category": "Fiora",
+							"column-1": "41"
+						},
+						{
+							"category": "Fizz",
+							"column-1": "11"
+						},
+						{
+							"category": "Galio",
+							"column-1": "13"
+						},
+						{
+							"category": "Gangplank",
+							"column-1": "126"
+						},
+						{
+							"category": "Garen",
+							"column-1": "39"
+						},
+						{
+							"category": "Gnar",
+							"column-1": "21"
+						},
+						{
+							"category": "Gragas",
+							"column-1": "8"
+						},
+						{
+							"category": "Graves",
+							"column-1": "18"
+						},
+						{
+							"category": "Hecarim",
+							"column-1": "6"
+						},
+						{
+							"category": "Heimerdinger",
+							"column-1": "11"
+						},
+						{
+							"category": "Illaoi",
+							"column-1": "26"
+						},
+						{
+							"category": "Irelia",
+							"column-1": "48"
+						},
+						{
+							"category": "Ivern",
+							"column-1": "11"
+						},
+						{
+							"category": "Janna",
+							"column-1": "39"
+						},
+						{
+							"category": "Jarvan IV",
+							"column-1": "8"
+						},
+						{
+							"category": "Jax",
+							"column-1": "42"
+						},
+						{
+							"category": "Jayce",
+							"column-1": "14"
+						},
+						{
+							"category": "Jhin",
+							"column-1": "79"
+						},
+						{
+							"category": "Jinx",
+							"column-1": "29"
+						},
+						{
+							"category": "Kai'Sa",
+							"column-1": "123"
+						},
+						{
+							"category": "Kalista",
+							"column-1": "16"
+						},
+						{
+							"category": "Karma",
+							"column-1": "16"
+						},
+						{
+							"category": "Karthus",
+							"column-1": "13"
+						},
+						{
+							"category": "Kassadin",
+							"column-1": "41"
+						},
+						{
+							"category": "Katarina",
+							"column-1": "55"
+						},
+						{
+							"category": "Kayle",
+							"column-1": "33"
+						},
+						{
+							"category": "Kayn",
+							"column-1": "27"
+						},
+						{
+							"category": "Kennen",
+							"column-1": "17"
+						},
+						{
+							"category": "Kha'Zix",
+							"column-1": "31"
+						},
+						{
+							"category": "Kindred",
+							"column-1": "26"
+						},
+						{
+							"category": "Kled",
+							"column-1": "45"
+						},
+						{
+							"category": "Kog'Maw",
+							"column-1": "12"
+						},
+						{
+							"category": "LeBlanc",
+							"column-1": "21"
+						},
+						{
+							"category": "Lee Sin",
+							"column-1": "25"
+						},
+						{
+							"category": "Leona",
+							"column-1": "44"
+						},
+						{
+							"category": "Lissandra",
+							"column-1": "14"
+						},
+						{
+							"category": "Lucian",
+							"column-1": "37"
+						},
+						{
+							"category": "Lulu",
+							"column-1": "36"
+						},
+						{
+							"category": "Lux",
+							"column-1": "109"
+						},
+						{
+							"category": "Malphite",
+							"column-1": "6"
+						},
+						{
+							"category": "Malzahar",
+							"column-1": "43"
+						},
+						{
+							"category": "Maokai",
+							"column-1": "7"
+						},
+						{
+							"category": "Master Yi",
+							"column-1": "29"
+						},
+						{
+							"category": "Miss Fortune",
+							"column-1": "22"
+						},
+						{
+							"category": "Mordekaiser",
+							"column-1": "54"
+						},
+						{
+							"category": "Morgana",
+							"column-1": "31"
+						},
+						{
+							"category": "Nami",
+							"column-1": "57"
+						},
+						{
+							"category": "Nasus",
+							"column-1": "23"
+						},
+						{
+							"category": "Nautilus",
+							"column-1": "60"
+						},
+						{
+							"category": "Neeko",
+							"column-1": "28"
+						},
+						{
+							"category": "Nidalee",
+							"column-1": "20"
+						},
+						{
+							"category": "Nocturne",
+							"column-1": "11"
+						},
+						{
+							"category": "Nunu & Willump",
+							"column-1": "31"
+						},
+						{
+							"category": "Olaf",
+							"column-1": "18"
+						},
+						{
+							"category": "Orianna",
+							"column-1": "29"
+						},
+						{
+							"category": "Ornn",
+							"column-1": "36"
+						},
+						{
+							"category": "Pantheon",
+							"column-1": "23"
+						},
+						{
+							"category": "Poppy",
+							"column-1": "14"
+						},
+						{
+							"category": "Pyke",
+							"column-1": "43"
+						},
+						{
+							"category": "Qiyana",
+							"column-1": "24"
+						},
+						{
+							"category": "Quinn",
+							"column-1": "32"
+						},
+						{
+							"category": "Rakan",
+							"column-1": "60"
+						},
+						{
+							"category": "Rammus",
+							"column-1": "15"
+						},
+						{
+							"category": "Rek'Sai",
+							"column-1": "28"
+						},
+						{
+							"category": "Renekton",
+							"column-1": "30"
+						},
+						{
+							"category": "Rengar",
+							"column-1": "60"
+						},
+						{
+							"category": "Riven",
+							"column-1": "164"
+						},
+						{
+							"category": "Rumble",
+							"column-1": "10"
+						},
+						{
+							"category": "Ryze",
+							"column-1": "37"
+						},
+						{
+							"category": "Sejuani",
+							"column-1": "5"
+						},
+						{
+							"category": "Senna",
+							"column-1": "22"
+						},
+						{
+							"category": "Shaco",
+							"column-1": "113"
+						},
+						{
+							"category": "Shen",
+							"column-1": "22"
+						},
+						{
+							"category": "Shyvana",
+							"column-1": "21"
+						},
+						{
+							"category": "Singed",
+							"column-1": "36"
+						},
+						{
+							"category": "Sion",
+							"column-1": "21"
+						},
+						{
+							"category": "Sivir",
+							"column-1": "6"
+						},
+						{
+							"category": "Skarner",
+							"column-1": "4"
+						},
+						{
+							"category": "Sona",
+							"column-1": "53"
+						},
+						{
+							"category": "Soraka",
+							"column-1": "61"
+						},
+						{
+							"category": "Swain",
+							"column-1": "26"
+						},
+						{
+							"category": "Sylas",
+							"column-1": "11"
+						},
+						{
+							"category": "Syndra",
+							"column-1": "51"
+						},
+						{
+							"category": "Tahm Kench",
+							"column-1": "14"
+						},
+						{
+							"category": "Taliyah",
+							"column-1": "64"
+						},
+						{
+							"category": "Talon",
+							"column-1": "26"
+						},
+						{
+							"category": "Taric",
+							"column-1": "8"
+						},
+						{
+							"category": "Teemo",
+							"column-1": "25"
+						},
+						{
+							"category": "Thresh",
+							"column-1": "57"
+						},
+						{
+							"category": "Tristana",
+							"column-1": "20"
+						},
+						{
+							"category": "Trundle",
+							"column-1": "5"
+						},
+						{
+							"category": "Tryndamere",
+							"column-1": "51"
+						},
+						{
+							"category": "Twisted Fate",
+							"column-1": "16"
+						},
+						{
+							"category": "Twitch",
+							"column-1": "18"
+						},
+						{
+							"category": "Udyr",
+							"column-1": "22"
+						},
+						{
+							"category": "Urgot",
+							"column-1": "66"
+						},
+						{
+							"category": "Varus",
+							"column-1": "9"
+						},
+						{
+							"category": "Vayne",
+							"column-1": "29"
+						},
+						{
+							"category": "Veigar",
+							"column-1": "17"
+						},
+						{
+							"category": "Vel'Koz",
+							"column-1": "35"
+						},
+						{
+							"category": "Vi",
+							"column-1": "35"
+						},
+						{
+							"category": "Viktor",
+							"column-1": "24"
+						},
+						{
+							"category": "Vladimir",
+							"column-1": "54"
+						},
+						{
+							"category": "Volibear",
+							"column-1": "5"
+						},
+						{
+							"category": "Warwick",
+							"column-1": "44"
+						},
+						{
+							"category": "Wukong",
+							"column-1": "13"
+						},
+						{
+							"category": "Xayah",
+							"column-1": "46"
+						},
+						{
+							"category": "Xerath",
+							"column-1": "27"
+						},
+						{
+							"category": "Xin Zhao",
+							"column-1": "8"
+						},
+						{
+							"category": "Yasuo",
+							"column-1": "57"
+						},
+						{
+							"category": "Yorick",
+							"column-1": "36"
+						},
+						{
+							"category": "Yuumi",
+							"column-1": "11"
+						},
+						{
+							"category": "Zac",
+							"column-1": "25"
+						},
+						{
+							"category": "Zed",
+							"column-1": "31"
+						},
+						{
+							"category": "Ziggs",
+							"column-1": "6"
+						},
+						{
+							"category": "Zilean",
+							"column-1": "19"
+						},
+						{
+							"category": "Zoe",
+							"column-1": "33"
+						},
+						{
+							"category": "Zyra",
+							"column-1": "44"
+						}
+					]
+				}
+			);
+		</script>
+    <script type="text/javascript">
+  AmCharts.makeChart("rank_div",
+    {
+      "type": "serial",
+      "categoryField": "category",
+      "theme": "light",
+      "categoryAxis": {
+        "gridPosition": "start"
+      },
+      "trendLines": [],
+      "graphs": [
+        {
+          "balloonText": "[[title]] of [[category]]:[[value]]",
+          "fillAlphas": 1,
+          "id": "AmGraph-1",
+          "title": "Aggression",
+          "type": "column",
+          "valueField": "column-1"
+        }
+      ],
+      "guides": [],
+      "valueAxes": [
+        {
+          "id": "ValueAxis-1",
+          "title": "Aggression Level, Out of 5"
+        }
+      ],
+      "allLabels": [],
+      "balloon": {},
+      "legend": {
+        "enabled": true,
+        "useGraphSettings": true
+      },
+      "titles": [
+        {
+          "id": "Title-1",
+          "size": 15,
+          "text": "Average Aggression Per Rank Non Aggregated"
+        }
+      ],
+      "dataProvider": [
+        {
+          "category": "Iron",
+          "column-1": "4"
+        },
+        {
+          "category": "Bronze",
+          "column-1": "3.67"
+        },
+        {
+          "category": "Silver",
+          "column-1": "3.59"
+        },
+        {
+          "category": "Gold",
+          "column-1": "3.77"
+        },
+        {
+          "category": "Platinum",
+          "column-1": "3.8"
+        },
+        {
+          "category": "Diamond",
+          "column-1": "3.89"
+        },
+        {
+          "category": "Master",
+          "column-1": "3.42"
+        },
+        {
+          "category": "Grandmaster",
+          "column-1": "4.5"
+        },
+        {
+          "category": "Challenger",
+          "column-1": "3.6"
+        }
+      ]
+    }
+  );
+</script>
+<script type="text/javascript">
+  AmCharts.makeChart("rank_combined",
+    {
+      "type": "serial",
+      "categoryField": "category",
+      "theme": "light",
+      "categoryAxis": {
+        "gridPosition": "start"
+      },
+      "trendLines": [],
+      "graphs": [
+        {
+          "balloonText": "[[title]] of [[category]]:[[value]]",
+          "fillAlphas": 1,
+          "id": "AmGraph-1",
+          "title": "Aggression",
+          "type": "column",
+          "valueField": "column-1"
+        }
+      ],
+      "guides": [],
+      "valueAxes": [
+        {
+          "id": "ValueAxis-1",
+          "title": "Aggression Level, Out of 5"
+        }
+      ],
+      "allLabels": [],
+      "balloon": {},
+      "legend": {
+        "enabled": true,
+        "useGraphSettings": true
+      },
+      "titles": [
+        {
+          "id": "Title-1",
+          "size": 15,
+          "text": "Average Aggression Per Rank Aggregated"
+        }
+      ],
+      "dataProvider": [
+        {
+          "category": "Iron and Bronze",
+          "column-1": "3.69"
+        },
+        {
+          "category": "Silver",
+          "column-1": "3.59"
+        },
+        {
+          "category": "Gold",
+          "column-1": "3.77"
+        },
+        {
+          "category": "Platinum",
+          "column-1": "3.8"
+        },
+        {
+          "category": "Diamond",
+          "column-1": "3.89"
+        },
+        {
+          "category": "Master, GM, and Challenger",
+          "column-1": "3.61"
+        }
+      ]
+    }
+  );
+</script>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <title>Projects | League Champion Select Assistant</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="vendors/linericon/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+        <link rel="stylesheet" href="vendors/animate-css/animate.css">
+        <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+        <!-- main css -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+            <div class="main_menu">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container box_1620">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+								<!--<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
+								<li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>-->
+								<li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" href="elements.html">League Assistant</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Color-Based MoCap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Tournament Sim</a></li>
+									</ul>
+								</li>
+								<!--<li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+										<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+									</ul>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>-->
+							</ul>
+						</div>
+					</div>
+            	</nav>
+            </div>
+        </header>
+        <!--================Header Menu Area =================-->
+
+        <!--================Home Banner Area =================-->
+        <section class="banner_area">
+            <div class="box_1620">
+				<div class="banner_inner d-flex align-items-center">
+					<div class="container">
+						<div class="banner_content text-center">
+							<h2>League of Legends Champion Select Assistant</h2>
+							<div class="page_link">
+								<a href="index.html">Home</a>
+								<a href="elements.html">Projects</a>
+								<a href="elements.html">League of Legends Champion Select Assistant</a>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+        <!--================End Home Banner Area =================-->
+
+
+        <!-- Start Sample Area -->
+			<section class="sample-text-area">
+				<div class="container">
+  					<h3 class="text-heading title_color">League of Legends Champion Select Assistant</h3>
+  					<p class="sample-text">
+  						This project was done in collaboration with fellow Information Science Student <a href="">Ryan</a> at the University of Maryland and was made possible through the contributions of the various League of Legends subreddits. Our mission is to understand the thought process behind selecting a champion in League of Legends, we collected data from various League of Legends based subreddits along with several discord gaming communities. We will use the statistics we gain here to make informed decisions for new players to help ease the tensions of a new players' early time playing ranked. None of our work is currently monetized and this is purely a passion project, any inquiries may be made to bkeplinger97@gmail.com. Our languages of choice has been Rust and Python, Python providing robust data manipulation tools and Rust offering a fast, thread-safe language which is easy to use. (Though I am slightly biased, given I'm a rustacean.)
+  					</p>
+        </div>
+			</section>
+      <div class="container">
+        <div class="section-top-border">
+          <div id="region_chart" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+        </div>
+
+        <div class="section-top-border">
+          <div id="aggro_chart" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+        </div>
+
+        <div class="section-top-border">
+          <div id="champ_pick" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+        </div>
+
+        <div class="section-top-border">
+          <div id="rank_div" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+        </div>
+
+        <div class="section-top-border">
+          <div id="rank_combined" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+        </div>
+      </div>
+
+			<!-- End Sample Area -->
+
+			<!-- Start Align Area -->
+			<!--<div class="whole-wrap">
+				<div class="container">
+					<div class="section-top-border">
+						<h3 class="mb-30 title_color">Color-Based Motion Capture</h3>
+						<div class="row">
+							<div class="col-md-3">
+								<img src="img/motion-capture.jpg" alt="" class="img-fluid">
+							</div>
+							<div class="col-md-9 mt-sm-20 left-align-p">
+								<p>As part of research for my lab, I have been developing a Color-Based Motion Capture System that operates completely independently of traditional infra-red tracking systems. The system relies on a distinct lighting color which contrasts with the area around it in tandem with other cameras to produce a 3-Dimensional mapping of objects based on multiple recordings. Currently most of this system is being written in Matlab, though a small amount of python has assisted our work.</p>
+							</div>
+						</div>
+					</div>
+					<div class="section-top-border">
+						<h3 class="mb-30 title_color">Tournament Simulator</h3>
+						<div class="row">
+							<div class="col-md-9">
+								<p class="col-md-9 mt-sm-20 left-align-p">Written in Java as a personal project, I created a small program that takes a list of players, forms a tournament consisting of a Single Round-Robin (each player plays every other player once), then seeding the top 8 players into a knockout stage where the games become best-of-five. The game is really simple, pick 2 random numbers, the higher one wins. I considered writing a better game, but didn't feel it was worth the effort. At the end, we output a single winner and they become the champion (not retained between runs).</p>
+                <p class="col-md-9 mt-sm-20 left-align-p">Improvements and <b>potential</b> future work:</br>I hope to eventually be able to make it so the tournament can be multiple round robins, and potentially have better games. Additionally this was an extremely simple project, so in the event I want to learn a new language on my own time, I would likely use something very similar to this.</p>
+                <p class = "col-md-9 mt-sm-20 left-align-p">My code is open-source and can be found <a href="https://github.com/bpkeplinger97/Tournament-Simulator">here</a>.</p>
+							</div>
+							<div class="col-md-3">
+								<img src="img/bracket.jpg" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>-->
+			<!-- End Align Area -->
+
+
+      <!--================Footer Area =================-->
+      <footer class="footer_area p_120">
+        <div class="container">
+          <div class="row footer_inner">
+            <div class="col-lg-5 col-sm-6">
+              <aside class="f_widget ab_widget">
+                <div class="f_title">
+                  <h3>Copyright</h3>
+                </div>
+                <p></p>
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+              </aside>
+            </div>
+            <div class="col-lg-5 col-sm-6">
+              <aside class="f_widget news_widget">
+                <div class="f_title">
+                  <h3>Quotes</h3>
+                </div>
+                <p>Greatness is not born, it is forged.</p>
+                <p>Onwards and Upwards</p>
+                <div id="mc_embed_signup">
+                              <!--<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
+                                <div class="input-group d-flex flex-row">
+                                      <input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                      <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>
+                                  </div>
+                                  <div class="mt-10 info"></div>
+                              </form>
+                          </div>-->
+              </aside>
+            </div>
+            <div class="col-lg-2">
+              <aside class="f_widget social_widget">
+                <div class="f_title">
+                  <h3>Follow Me</h3>
+                </div>
+                <p>Let's be social</p>
+                <ul class="list">
+                  <li><a href="https://www.facebook.com/brandon.keplinger.12" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="https://twitter.com/bpkeplinger97" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <!--<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                  <li><a href="#"><i class="fa fa-behance"></i></a></li>-->
+                </ul>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </footer>
+        <!--================End Footer Area =================-->
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/stellar.js"></script>
+        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+        <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+        <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="vendors/isotope/isotope.pkgd.min.js"></script>
+        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+        <script src="vendors/counter-up/jquery.counterup.min.js"></script>
+        <script src="js/mail-script.js"></script>
+        <script src="js/theme.js"></script>
+    </body>
+</html>
