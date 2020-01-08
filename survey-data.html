@@ -6,6 +6,7 @@
   		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
   		<script type="text/javascript" src="https://www.amcharts.com/lib/3/pie.js"></script>
       <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+      <script type="text/javascript" src="https://www.amcharts.com/lib/3/xy.js"></script>
   		<script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/light.js"></script>
 
   		<!-- amCharts javascript code -->
@@ -13,6 +14,7 @@
   			AmCharts.makeChart("region_chart",
   				{
             "type": "pie",
+            "marginTop": 40,
   					"balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
   					"startAngle": 18,
   					"groupedAlpha": 0,
@@ -149,7 +151,7 @@
           }
         );
       </script>
-      <script type="text/javascript">
+<!--      <script type="text/javascript">
 			AmCharts.makeChart("champ_pick",
 				{
 					"type": "serial",
@@ -784,7 +786,7 @@
 					]
 				}
 			);
-		</script>
+		</script>-->
     <script type="text/javascript">
   AmCharts.makeChart("rank_div",
     {
@@ -808,6 +810,8 @@
       "guides": [],
       "valueAxes": [
         {
+          "maximum": 5,
+          "minimum": 0,
           "id": "ValueAxis-1",
           "title": "Aggression Level, Out of 5"
         }
@@ -815,7 +819,7 @@
       "allLabels": [],
       "balloon": {},
       "legend": {
-        "enabled": true,
+        "enabled": false,
         "useGraphSettings": true
       },
       "titles": [
@@ -889,6 +893,8 @@
       "guides": [],
       "valueAxes": [
         {
+          "maximum": 5,
+          "minimum": 0,
           "id": "ValueAxis-1",
           "title": "Aggression Level, Out of 5"
         }
@@ -896,7 +902,7 @@
       "allLabels": [],
       "balloon": {},
       "legend": {
-        "enabled": true,
+        "enabled": false,
         "useGraphSettings": true
       },
       "titles": [
@@ -935,6 +941,1440 @@
     }
   );
 </script>
+<!--<script type="text/javascript">
+			AmCharts.makeChart("champ_aggression",
+				{
+					"type": "serial",
+					"categoryField": "category",
+					"theme": "light",
+					"categoryAxis": {
+						"gridPosition": "start"
+					},
+					"chartScrollbar": {
+						"enabled": true
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"balloonText": "[[title]] of [[category]]:[[value]]",
+							"columnWidth": 0.22,
+							"fillAlphas": 1,
+							"fillColors": "#9898D6",
+							"id": "AmGraph-1",
+							"title": "Aggression",
+							"type": "column",
+							"valueField": "column-1",
+							"visibleInLegend": false
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"maximum": 5,
+							"minimum": 0,
+							"title": "Aggression Level out of 5"
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"legend": {
+						"enabled": true,
+						"useGraphSettings": true
+					},
+					"titles": [
+						{
+							"id": "Title-1",
+							"size": 15,
+							"text": "Average Aggression Level Per Champion"
+						}
+					],
+					"dataProvider": [
+						{
+							"category": "Aatrox",
+							"column-1": "4.06"
+						},
+						{
+							"category": "Ahri",
+							"column-1": "3.31"
+						},
+						{
+							"category": "Akali",
+							"column-1": "3.95"
+						},
+						{
+							"category": "Alistar",
+							"column-1": "3.86"
+						},
+						{
+							"category": "Amumu",
+							"column-1": "2.79"
+						},
+						{
+							"category": "Anivia",
+							"column-1": "3.26"
+						},
+						{
+							"category": "Annie",
+							"column-1": "3.5"
+						},
+						{
+							"category": "Aphelios",
+							"column-1": "3.77"
+						},
+						{
+							"category": "Ashe",
+							"column-1": "3.21"
+						},
+						{
+							"category": "Aurelion Sol",
+							"column-1": "3.68"
+						},
+						{
+							"category": "Azir",
+							"column-1": "3.56"
+						},
+						{
+							"category": "Bard",
+							"column-1": "3.92"
+						},
+						{
+							"category": "Blitzcrank",
+							"column-1": "4"
+						},
+						{
+							"category": "Brand",
+							"column-1": "3.54"
+						},
+						{
+							"category": "Braum",
+							"column-1": "3.43"
+						},
+						{
+							"category": "Caitlyn",
+							"column-1": "3.49"
+						},
+						{
+							"category": "Camille",
+							"column-1": "3.94"
+						},
+						{
+							"category": "Cassiopeia",
+							"column-1": "3.41"
+						},
+						{
+							"category": "Cho'Gath",
+							"column-1": "3.61"
+						},
+						{
+							"category": "Corki",
+							"column-1": "2.6"
+						},
+						{
+							"category": "Darius",
+							"column-1": "3.95"
+						},
+						{
+							"category": "Diana",
+							"column-1": "3.55"
+						},
+						{
+							"category": "Dr. Mundo",
+							"column-1": "3.43"
+						},
+						{
+							"category": "Draven",
+							"column-1": "4.59"
+						},
+						{
+							"category": "Ekko",
+							"column-1": "3.65"
+						},
+						{
+							"category": "Elise",
+							"column-1": "4"
+						},
+						{
+							"category": "Evelynn",
+							"column-1": "3.65"
+						},
+						{
+							"category": "Ezreal",
+							"column-1": "3.38"
+						},
+						{
+							"category": "Fiddlesticks",
+							"column-1": "3.88"
+						},
+						{
+							"category": "Fiora",
+							"column-1": "3.76"
+						},
+						{
+							"category": "Fizz",
+							"column-1": "3.73"
+						},
+						{
+							"category": "Galio",
+							"column-1": "3.23"
+						},
+						{
+							"category": "Gangplank",
+							"column-1": "3.52"
+						},
+						{
+							"category": "Garen",
+							"column-1": "3.38"
+						},
+						{
+							"category": "Gnar",
+							"column-1": "3.52"
+						},
+						{
+							"category": "Gragas",
+							"column-1": "3.88"
+						},
+						{
+							"category": "Graves",
+							"column-1": "3.89"
+						},
+						{
+							"category": "Hecarim",
+							"column-1": "3.83"
+						},
+						{
+							"category": "Heimerdinger",
+							"column-1": "3.36"
+						},
+						{
+							"category": "Illaoi",
+							"column-1": "3.5"
+						},
+						{
+							"category": "Irelia",
+							"column-1": "3.85"
+						},
+						{
+							"category": "Ivern",
+							"column-1": "3.18"
+						},
+						{
+							"category": "Janna",
+							"column-1": "3.67"
+						},
+						{
+							"category": "Jarvan IV",
+							"column-1": "3.75"
+						},
+						{
+							"category": "Jax",
+							"column-1": "3.67"
+						},
+						{
+							"category": "Jayce",
+							"column-1": "3.64"
+						},
+						{
+							"category": "Jhin",
+							"column-1": "3.63"
+						},
+						{
+							"category": "Jinx",
+							"column-1": "3.38"
+						},
+						{
+							"category": "Kai'Sa",
+							"column-1": "3.41"
+						},
+						{
+							"category": "Kalista",
+							"column-1": "4.25"
+						},
+						{
+							"category": "Karma",
+							"column-1": "3.5"
+						},
+						{
+							"category": "Karthus",
+							"column-1": "3"
+						},
+						{
+							"category": "Kassadin",
+							"column-1": "3.63"
+						},
+						{
+							"category": "Katarina",
+							"column-1": "4.04"
+						},
+						{
+							"category": "Kayle",
+							"column-1": "3.12"
+						},
+						{
+							"category": "Kayn",
+							"column-1": "3.33"
+						},
+						{
+							"category": "Kennen",
+							"column-1": "3.18"
+						},
+						{
+							"category": "Kha'Zix",
+							"column-1": "3.97"
+						},
+						{
+							"category": "Kindred",
+							"column-1": "4.04"
+						},
+						{
+							"category": "Kled",
+							"column-1": "4.18"
+						},
+						{
+							"category": "Kog'Maw",
+							"column-1": "3.67"
+						},
+						{
+							"category": "LeBlanc",
+							"column-1": "3.9"
+						},
+						{
+							"category": "Lee Sin",
+							"column-1": "4.04"
+						},
+						{
+							"category": "Leona",
+							"column-1": "4.05"
+						},
+						{
+							"category": "Lissandra",
+							"column-1": "3"
+						},
+						{
+							"category": "Lucian",
+							"column-1": "3.86"
+						},
+						{
+							"category": "Lulu",
+							"column-1": "3.53"
+						},
+						{
+							"category": "Lux",
+							"column-1": "3.4"
+						},
+						{
+							"category": "Malphite",
+							"column-1": "3.5"
+						},
+						{
+							"category": "Malzahar",
+							"column-1": "2.72"
+						},
+						{
+							"category": "Maokai",
+							"column-1": "3"
+						},
+						{
+							"category": "Master Yi",
+							"column-1": "3.93"
+						},
+						{
+							"category": "Miss Fortune",
+							"column-1": "3.59"
+						},
+						{
+							"category": "Mordekaiser",
+							"column-1": "3.63"
+						},
+						{
+							"category": "Morgana",
+							"column-1": "3.45"
+						},
+						{
+							"category": "Nami",
+							"column-1": "3.37"
+						},
+						{
+							"category": "Nasus",
+							"column-1": "2.96"
+						},
+						{
+							"category": "Nautilus",
+							"column-1": "4"
+						},
+						{
+							"category": "Neeko",
+							"column-1": "3.82"
+						},
+						{
+							"category": "Nidalee",
+							"column-1": "4.1"
+						},
+						{
+							"category": "Nocturne",
+							"column-1": "3.55"
+						},
+						{
+							"category": "Nunu & Willump",
+							"column-1": "3.58"
+						},
+						{
+							"category": "Olaf",
+							"column-1": "4.06"
+						},
+						{
+							"category": "Orianna",
+							"column-1": "2.97"
+						},
+						{
+							"category": "Ornn",
+							"column-1": "3.08"
+						},
+						{
+							"category": "Pantheon",
+							"column-1": "4.04"
+						},
+						{
+							"category": "Poppy",
+							"column-1": "3.36"
+						},
+						{
+							"category": "Pyke",
+							"column-1": "4.05"
+						},
+						{
+							"category": "Qiyana",
+							"column-1": "3.92"
+						},
+						{
+							"category": "Quinn",
+							"column-1": "3.94"
+						},
+						{
+							"category": "Rakan",
+							"column-1": "3.68"
+						},
+						{
+							"category": "Rammus",
+							"column-1": "3.67"
+						},
+						{
+							"category": "Rek'Sai",
+							"column-1": "4.07"
+						},
+						{
+							"category": "Renekton",
+							"column-1": "4.1"
+						},
+						{
+							"category": "Rengar",
+							"column-1": "4.28"
+						},
+						{
+							"category": "Riven",
+							"column-1": "3.96"
+						},
+						{
+							"category": "Rumble",
+							"column-1": "3.9"
+						},
+						{
+							"category": "Ryze",
+							"column-1": "3.11"
+						},
+						{
+							"category": "Sejuani",
+							"column-1": "3"
+						},
+						{
+							"category": "Senna",
+							"column-1": "3.14"
+						},
+						{
+							"category": "Shaco",
+							"column-1": "3.86"
+						},
+						{
+							"category": "Shen",
+							"column-1": "2.95"
+						},
+						{
+							"category": "Shyvana",
+							"column-1": "3.33"
+						},
+						{
+							"category": "Singed",
+							"column-1": "3.89"
+						},
+						{
+							"category": "Sion",
+							"column-1": "3.57"
+						},
+						{
+							"category": "Sivir",
+							"column-1": "3.83"
+						},
+						{
+							"category": "Skarner",
+							"column-1": "3.5"
+						},
+						{
+							"category": "Sona",
+							"column-1": "3.42"
+						},
+						{
+							"category": "Soraka",
+							"column-1": "3.48"
+						},
+						{
+							"category": "Swain",
+							"column-1": "3.42"
+						},
+						{
+							"category": "Sylas",
+							"column-1": "3.91"
+						},
+						{
+							"category": "Syndra",
+							"column-1": "3.53"
+						},
+						{
+							"category": "Tahm Kench",
+							"column-1": "3.79"
+						},
+						{
+							"category": "Taliyah",
+							"column-1": "3.62"
+						},
+						{
+							"category": "Talon",
+							"column-1": "4.08"
+						},
+						{
+							"category": "Taric",
+							"column-1": "3.38"
+						},
+						{
+							"category": "Teemo",
+							"column-1": "3.72"
+						},
+						{
+							"category": "Thresh",
+							"column-1": "3.77"
+						},
+						{
+							"category": "Tristana",
+							"column-1": "4.05"
+						},
+						{
+							"category": "Trundle",
+							"column-1": "3.4"
+						},
+						{
+							"category": "Tryndamere",
+							"column-1": "3.88"
+						},
+						{
+							"category": "Twisted Fate",
+							"column-1": "2.75"
+						},
+						{
+							"category": "Twitch",
+							"column-1": "4"
+						},
+						{
+							"category": "Udyr",
+							"column-1": "3.95"
+						},
+						{
+							"category": "Urgot",
+							"column-1": "3.58"
+						},
+						{
+							"category": "Varus",
+							"column-1": "3.89"
+						},
+						{
+							"category": "Vayne",
+							"column-1": "3.55"
+						},
+						{
+							"category": "Veigar",
+							"column-1": "3.12"
+						},
+						{
+							"category": "Vel'Koz",
+							"column-1": "3.63"
+						},
+						{
+							"category": "Vi",
+							"column-1": "3.77"
+						},
+						{
+							"category": "Viktor",
+							"column-1": "3.25"
+						},
+						{
+							"category": "Vladimir",
+							"column-1": "3.59"
+						},
+						{
+							"category": "Volibear",
+							"column-1": "4.2"
+						},
+						{
+							"category": "Warwick",
+							"column-1": "3.8"
+						},
+						{
+							"category": "Wukong",
+							"column-1": "4"
+						},
+						{
+							"category": "Xayah",
+							"column-1": "3.3"
+						},
+						{
+							"category": "Xerath",
+							"column-1": "3.56"
+						},
+						{
+							"category": "Xin Zhao",
+							"column-1": "3.88"
+						},
+						{
+							"category": "Yasuo",
+							"column-1": "4.14"
+						},
+						{
+							"category": "Yorick",
+							"column-1": "3.33"
+						},
+						{
+							"category": "Yuumi",
+							"column-1": "2.82"
+						},
+						{
+							"category": "Zac",
+							"column-1": "3.6"
+						},
+						{
+							"category": "Zed",
+							"column-1": "3.55"
+						},
+						{
+							"category": "Ziggs",
+							"column-1": "3.33"
+						},
+						{
+							"category": "Zilean",
+							"column-1": "3.32"
+						},
+						{
+							"category": "Zoe",
+							"column-1": "3.82"
+						},
+						{
+							"category": "Zyra",
+							"column-1": "3.75"
+						}
+					]
+				}
+			);
+		</script>-->
+    <script type="text/javascript">
+			AmCharts.makeChart("agg_to_pick_primary",
+				{
+					"type": "xy",
+					"theme": "light",
+					"chartCursor": {
+						"enabled": false,
+						"animationDuration": 0,
+						"balloonPointerOrientation": " vertical",
+						"categoryBalloonEnabled": false,
+						"leaveAfterTouch": false,
+						"limitToGraph": "AmGraph-1"
+					},
+					"chartScrollbar": {
+						"enabled": true
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"balloonText": "Aggression:<b>[[x]]</b> Picks:<b>[[y]]</b><br>Champion:<b>[[value]]</b>",
+							"bullet": "round",
+							"bulletColor": "#888888",
+							"bulletHitAreaSize": 0,
+							"id": "AmGraph-1",
+							"lineAlpha": 0,
+							"lineColor": "#b0de09",
+							"valueField": "value",
+							"xField": "Aggression",
+							"yField": "Picks"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"axisAlpha": 0,
+							"title": "Picks"
+						},
+						{
+							"id": "ValueAxis-2",
+							"position": "bottom",
+							"axisAlpha": 0,
+							"title": "Aggression"
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"titles": [
+						{
+							"id": "Title-1",
+							"text": "Champion Aggression Mapped to Pick Count as Primary"
+						}
+					],
+					"dataProvider": [
+						{
+							"value": "Aatrox",
+							"Picks": "48",
+							"Aggression": "4.06"
+						},
+						{
+							"value": "Ahri",
+							"Picks": "64",
+							"Aggression": "3.31"
+						},
+						{
+							"value": "Akali",
+							"Picks": "62",
+							"Aggression": "3.95"
+						},
+						{
+							"value": "Alistar",
+							"Picks": "14",
+							"Aggression": "3.86"
+						},
+						{
+							"value": "Amumu",
+							"Picks": "14",
+							"Aggression": "2.79"
+						},
+						{
+							"value": "Anivia",
+							"Picks": "19",
+							"Aggression": "3.26"
+						},
+						{
+							"value": "Annie",
+							"Picks": "16",
+							"Aggression": "3.5"
+						},
+						{
+							"value": "Aphelios",
+							"Picks": "26",
+							"Aggression": "3.77"
+						},
+						{
+							"value": "Ashe",
+							"Picks": "19",
+							"Aggression": "3.21"
+						},
+						{
+							"value": "Aurelion Sol",
+							"Picks": "25",
+							"Aggression": "3.68"
+						},
+						{
+							"value": "Azir",
+							"Picks": "34",
+							"Aggression": "3.56"
+						},
+						{
+							"value": "Bard",
+							"Picks": "53",
+							"Aggression": "3.92"
+						},
+						{
+							"value": "Blitzcrank",
+							"Picks": "6",
+							"Aggression": "4"
+						},
+						{
+							"value": "Brand",
+							"Picks": "24",
+							"Aggression": "3.54"
+						},
+						{
+							"value": "Braum",
+							"Picks": "7",
+							"Aggression": "3.43"
+						},
+						{
+							"value": "Caitlyn",
+							"Picks": "63",
+							"Aggression": "3.49"
+						},
+						{
+							"value": "Camille",
+							"Picks": "53",
+							"Aggression": "3.94"
+						},
+						{
+							"value": "Cassiopeia",
+							"Picks": "17",
+							"Aggression": "3.41"
+						},
+						{
+							"value": "Cho'Gath",
+							"Picks": "18",
+							"Aggression": "3.61"
+						},
+						{
+							"value": "Corki",
+							"Picks": "5",
+							"Aggression": "2.6"
+						},
+						{
+							"value": "Darius",
+							"Picks": "82",
+							"Aggression": "3.95"
+						},
+						{
+							"value": "Diana",
+							"Picks": "38",
+							"Aggression": "3.55"
+						},
+						{
+							"value": "Dr. Mundo",
+							"Picks": "21",
+							"Aggression": "3.43"
+						},
+						{
+							"value": "Draven",
+							"Picks": "32",
+							"Aggression": "4.59"
+						},
+						{
+							"value": "Ekko",
+							"Picks": "43",
+							"Aggression": "3.65"
+						},
+						{
+							"value": "Elise",
+							"Picks": "15",
+							"Aggression": "4"
+						},
+						{
+							"value": "Evelynn",
+							"Picks": "34",
+							"Aggression": "3.65"
+						},
+						{
+							"value": "Ezreal",
+							"Picks": "34",
+							"Aggression": "3.38"
+						},
+						{
+							"value": "Fiddlesticks",
+							"Picks": "16",
+							"Aggression": "3.88"
+						},
+						{
+							"value": "Fiora",
+							"Picks": "41",
+							"Aggression": "3.76"
+						},
+						{
+							"value": "Fizz",
+							"Picks": "11",
+							"Aggression": "3.73"
+						},
+						{
+							"value": "Galio",
+							"Picks": "13",
+							"Aggression": "3.23"
+						},
+						{
+							"value": "Gangplank",
+							"Picks": "126",
+							"Aggression": "3.52"
+						},
+						{
+							"value": "Garen",
+							"Picks": "39",
+							"Aggression": "3.38"
+						},
+						{
+							"value": "Gnar",
+							"Picks": "21",
+							"Aggression": "3.52"
+						},
+						{
+							"value": "Gragas",
+							"Picks": "8",
+							"Aggression": "3.88"
+						},
+						{
+							"value": "Graves",
+							"Picks": "18",
+							"Aggression": "3.89"
+						},
+						{
+							"value": "Hecarim",
+							"Picks": "6",
+							"Aggression": "3.83"
+						},
+						{
+							"value": "Heimerdinger",
+							"Picks": "11",
+							"Aggression": "3.36"
+						},
+						{
+							"value": "Illaoi",
+							"Picks": "26",
+							"Aggression": "3.5"
+						},
+						{
+							"value": "Irelia",
+							"Picks": "48",
+							"Aggression": "3.85"
+						},
+						{
+							"value": "Ivern",
+							"Picks": "11",
+							"Aggression": "3.18"
+						},
+						{
+							"value": "Janna",
+							"Picks": "39",
+							"Aggression": "3.67"
+						},
+						{
+							"value": "Jarvan IV",
+							"Picks": "8",
+							"Aggression": "3.75"
+						},
+						{
+							"value": "Jax",
+							"Picks": "42",
+							"Aggression": "3.67"
+						},
+						{
+							"value": "Jayce",
+							"Picks": "14",
+							"Aggression": "3.64"
+						},
+						{
+							"value": "Jhin",
+							"Picks": "79",
+							"Aggression": "3.63"
+						},
+						{
+							"value": "Jinx",
+							"Picks": "29",
+							"Aggression": "3.38"
+						},
+						{
+							"value": "Kai'Sa",
+							"Picks": "123",
+							"Aggression": "3.41"
+						},
+						{
+							"value": "Kalista",
+							"Picks": "16",
+							"Aggression": "4.25"
+						},
+						{
+							"value": "Karma",
+							"Picks": "16",
+							"Aggression": "3.5"
+						},
+						{
+							"value": "Karthus",
+							"Picks": "13",
+							"Aggression": "3"
+						},
+						{
+							"value": "Kassadin",
+							"Picks": "41",
+							"Aggression": "3.63"
+						},
+						{
+							"value": "Katarina",
+							"Picks": "55",
+							"Aggression": "4.04"
+						},
+						{
+							"value": "Kayle",
+							"Picks": "33",
+							"Aggression": "3.12"
+						},
+						{
+							"value": "Kayn",
+							"Picks": "27",
+							"Aggression": "3.33"
+						},
+						{
+							"value": "Kennen",
+							"Picks": "17",
+							"Aggression": "3.18"
+						},
+						{
+							"value": "Kha'Zix",
+							"Picks": "31",
+							"Aggression": "3.97"
+						},
+						{
+							"value": "Kindred",
+							"Picks": "26",
+							"Aggression": "4.04"
+						},
+						{
+							"value": "Kled",
+							"Picks": "45",
+							"Aggression": "4.18"
+						},
+						{
+							"value": "Kog'Maw",
+							"Picks": "12",
+							"Aggression": "3.67"
+						},
+						{
+							"value": "LeBlanc",
+							"Picks": "21",
+							"Aggression": "3.9"
+						},
+						{
+							"value": "Lee Sin",
+							"Picks": "25",
+							"Aggression": "4.04"
+						},
+						{
+							"value": "Leona",
+							"Picks": "44",
+							"Aggression": "4.05"
+						},
+						{
+							"value": "Lissandra",
+							"Picks": "14",
+							"Aggression": "3"
+						},
+						{
+							"value": "Lucian",
+							"Picks": "37",
+							"Aggression": "3.86"
+						},
+						{
+							"value": "Lulu",
+							"Picks": "36",
+							"Aggression": "3.53"
+						},
+						{
+							"value": "Lux",
+							"Picks": "109",
+							"Aggression": "3.4"
+						},
+						{
+							"value": "Malphite",
+							"Picks": "6",
+							"Aggression": "3.5"
+						},
+						{
+							"value": "Malzahar",
+							"Picks": "43",
+							"Aggression": "2.72"
+						},
+						{
+							"value": "Maokai",
+							"Picks": "7",
+							"Aggression": "3"
+						},
+						{
+							"value": "Master Yi",
+							"Picks": "29",
+							"Aggression": "3.93"
+						},
+						{
+							"value": "Miss Fortune",
+							"Picks": "22",
+							"Aggression": "3.59"
+						},
+						{
+							"value": "Mordekaiser",
+							"Picks": "54",
+							"Aggression": "3.63"
+						},
+						{
+							"value": "Morgana",
+							"Picks": "31",
+							"Aggression": "3.45"
+						},
+						{
+							"value": "Nami",
+							"Picks": "57",
+							"Aggression": "3.37"
+						},
+						{
+							"value": "Nasus",
+							"Picks": "23",
+							"Aggression": "2.96"
+						},
+						{
+							"value": "Nautilus",
+							"Picks": "60",
+							"Aggression": "4"
+						},
+						{
+							"value": "Neeko",
+							"Picks": "28",
+							"Aggression": "3.82"
+						},
+						{
+							"value": "Nidalee",
+							"Picks": "20",
+							"Aggression": "4.1"
+						},
+						{
+							"value": "Nocturne",
+							"Picks": "11",
+							"Aggression": "3.55"
+						},
+						{
+							"value": "Nunu & Willump",
+							"Picks": "31",
+							"Aggression": "3.58"
+						},
+						{
+							"value": "Olaf",
+							"Picks": "18",
+							"Aggression": "4.06"
+						},
+						{
+							"value": "Orianna",
+							"Picks": "29",
+							"Aggression": "2.97"
+						},
+						{
+							"value": "Ornn",
+							"Picks": "36",
+							"Aggression": "3.08"
+						},
+						{
+							"value": "Pantheon",
+							"Picks": "23",
+							"Aggression": "4.04"
+						},
+						{
+							"value": "Poppy",
+							"Picks": "14",
+							"Aggression": "3.36"
+						},
+						{
+							"value": "Pyke",
+							"Picks": "43",
+							"Aggression": "4.05"
+						},
+						{
+							"value": "Qiyana",
+							"Picks": "24",
+							"Aggression": "3.92"
+						},
+						{
+							"value": "Quinn",
+							"Picks": "32",
+							"Aggression": "3.94"
+						},
+						{
+							"value": "Rakan",
+							"Picks": "60",
+							"Aggression": "3.68"
+						},
+						{
+							"value": "Rammus",
+							"Picks": "15",
+							"Aggression": "3.67"
+						},
+						{
+							"value": "Rek'Sai",
+							"Picks": "28",
+							"Aggression": "4.07"
+						},
+						{
+							"value": "Renekton",
+							"Picks": "30",
+							"Aggression": "4.1"
+						},
+						{
+							"value": "Rengar",
+							"Picks": "60",
+							"Aggression": "4.28"
+						},
+						{
+							"value": "Riven",
+							"Picks": "164",
+							"Aggression": "3.96"
+						},
+						{
+							"value": "Rumble",
+							"Picks": "10",
+							"Aggression": "3.9"
+						},
+						{
+							"value": "Ryze",
+							"Picks": "37",
+							"Aggression": "3.11"
+						},
+						{
+							"value": "Sejuani",
+							"Picks": "5",
+							"Aggression": "3"
+						},
+						{
+							"value": "Senna",
+							"Picks": "22",
+							"Aggression": "3.14"
+						},
+						{
+							"value": "Shaco",
+							"Picks": "113",
+							"Aggression": "3.86"
+						},
+						{
+							"value": "Shen",
+							"Picks": "22",
+							"Aggression": "2.95"
+						},
+						{
+							"value": "Shyvana",
+							"Picks": "21",
+							"Aggression": "3.33"
+						},
+						{
+							"value": "Singed",
+							"Picks": "36",
+							"Aggression": "3.89"
+						},
+						{
+							"value": "Sion",
+							"Picks": "21",
+							"Aggression": "3.57"
+						},
+						{
+							"value": "Sivir",
+							"Picks": "6",
+							"Aggression": "3.83"
+						},
+						{
+							"value": "Skarner",
+							"Picks": "4",
+							"Aggression": "3.5"
+						},
+						{
+							"value": "Sona",
+							"Picks": "53",
+							"Aggression": "3.42"
+						},
+						{
+							"value": "Soraka",
+							"Picks": "61",
+							"Aggression": "3.48"
+						},
+						{
+							"value": "Swain",
+							"Picks": "26",
+							"Aggression": "3.42"
+						},
+						{
+							"value": "Sylas",
+							"Picks": "11",
+							"Aggression": "3.91"
+						},
+						{
+							"value": "Syndra",
+							"Picks": "51",
+							"Aggression": "3.53"
+						},
+						{
+							"value": "Tahm Kench",
+							"Picks": "14",
+							"Aggression": "3.79"
+						},
+						{
+							"value": "Taliyah",
+							"Picks": "64",
+							"Aggression": "3.62"
+						},
+						{
+							"value": "Talon",
+							"Picks": "26",
+							"Aggression": "4.08"
+						},
+						{
+							"value": "Taric",
+							"Picks": "8",
+							"Aggression": "3.38"
+						},
+						{
+							"value": "Teemo",
+							"Picks": "25",
+							"Aggression": "3.72"
+						},
+						{
+							"value": "Thresh",
+							"Picks": "57",
+							"Aggression": "3.77"
+						},
+						{
+							"value": "Tristana",
+							"Picks": "20",
+							"Aggression": "4.05"
+						},
+						{
+							"value": "Trundle",
+							"Picks": "5",
+							"Aggression": "3.4"
+						},
+						{
+							"value": "Tryndamere",
+							"Picks": "51",
+							"Aggression": "3.88"
+						},
+						{
+							"value": "Twisted Fate",
+							"Picks": "16",
+							"Aggression": "2.75"
+						},
+						{
+							"value": "Twitch",
+							"Picks": "18",
+							"Aggression": "4"
+						},
+						{
+							"value": "Udyr",
+							"Picks": "22",
+							"Aggression": "3.95"
+						},
+						{
+							"value": "Urgot",
+							"Picks": "66",
+							"Aggression": "3.58"
+						},
+						{
+							"value": "Varus",
+							"Picks": "9",
+							"Aggression": "3.89"
+						},
+						{
+							"value": "Vayne",
+							"Picks": "29",
+							"Aggression": "3.55"
+						},
+						{
+							"value": "Veigar",
+							"Picks": "17",
+							"Aggression": "3.12"
+						},
+						{
+							"value": "Vel'Koz",
+							"Picks": "35",
+							"Aggression": "3.63"
+						},
+						{
+							"value": "Vi",
+							"Picks": "35",
+							"Aggression": "3.77"
+						},
+						{
+							"value": "Viktor",
+							"Picks": "24",
+							"Aggression": "3.25"
+						},
+						{
+							"value": "Vladimir",
+							"Picks": "54",
+							"Aggression": "3.59"
+						},
+						{
+							"value": "Volibear",
+							"Picks": "5",
+							"Aggression": "4.2"
+						},
+						{
+							"value": "Warwick",
+							"Picks": "44",
+							"Aggression": "3.8"
+						},
+						{
+							"value": "Wukong",
+							"Picks": "13",
+							"Aggression": "4"
+						},
+						{
+							"value": "Xayah",
+							"Picks": "46",
+							"Aggression": "3.3"
+						},
+						{
+							"value": "Xerath",
+							"Picks": "27",
+							"Aggression": "3.56"
+						},
+						{
+							"value": "Xin Zhao",
+							"Picks": "8",
+							"Aggression": "3.88"
+						},
+						{
+							"value": "Yasuo",
+							"Picks": "57",
+							"Aggression": "4.14"
+						},
+						{
+							"value": "Yorick",
+							"Picks": "36",
+							"Aggression": "3.33"
+						},
+						{
+							"value": "Yuumi",
+							"Picks": "11",
+							"Aggression": "2.82"
+						},
+						{
+							"value": "Zac",
+							"Picks": "25",
+							"Aggression": "3.6"
+						},
+						{
+							"value": "Zed",
+							"Picks": "31",
+							"Aggression": "3.55"
+						},
+						{
+							"value": "Ziggs",
+							"Picks": "6",
+							"Aggression": "3.33"
+						},
+						{
+							"value": "Zilean",
+							"Picks": "19",
+							"Aggression": "3.32"
+						},
+						{
+							"value": "Zoe",
+							"Picks": "33",
+							"Aggression": "3.82"
+						},
+						{
+							"value": "Zyra",
+							"Picks": "44",
+							"Aggression": "3.75"
+						}
+					]
+				}
+			);
+		</script>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -1029,22 +2469,39 @@
       <div class="container">
         <div class="section-top-border">
           <div id="region_chart" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+          <p class="sample-text"><font size="2">Response by region, unsurprisingly most responses came from North America and Europe, totaling to 4103 responses, or 87.3 percent. We did not post on Weibo to gather Chinese data due to language barriers, though we considered it.</font></p>
         </div>
+
+
 
         <div class="section-top-border">
           <div id="aggro_chart" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
-        </div>
-
-        <div class="section-top-border">
-          <div id="champ_pick" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+          <p class="sample-text"><font size="2">Self-Provided Aggression levels, interestingly the average aggression was 3.66 out of 5 overall, indicating that players who responded to our survey were more aggressive than average during their play.</font></p>
         </div>
 
         <div class="section-top-border">
           <div id="rank_div" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+           <p class="sample-text"><font size="2">Mapping of Aggression to Rank without aggregation. The question of "What is your current rank?" was only asked to those who said their main play-mode is Ranked Draft, leaving us with 2275 responses. From that, we correlated the average aggression across each rank. This is with the small groups of Iron, Master, Grandmaster, and Challenger (which account for 57 responses total).</font></p>
         </div>
 
         <div class="section-top-border">
           <div id="rank_combined" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+          <p class="sample-text"><font size="2">The average response of aggression to rank tier, with the small groups being aggregated. Iron was combined with Bronze while Master, Grandmaster, and Challenger were combined into a single category.</font></p>
+        </div>
+<!--
+        <div class="section-top-border">
+          <div id="champ_pick" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+          <p class="sample-text"><font size="2">Amount of times a champion was picked as a primary champion. It's worth noting that two subreddits, the Shen and Senna main subreddits, were removed shortly after posting by one person (who just so happens to moderate both, how's that for impartial judgement), so data from those two may have been significantly downplayed. Sett was not included in this as he had not been officially released to the public yet.</font></p>
+        </div>
+
+        <div class="section-top-border">
+          <div id="champ_aggression" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+          <p class="sample-text"><font size="2">The average response of aggression per champion. Interestingly no champion had a score below 2.5, backing up that players who took our survey are more likely to play aggressive. Corki had the lowest aggression, with a 2.6 out of 5, while Draven (unsurprisingly), had an average aggression of 4.59</font></p>
+        </div>
+-->
+        <div class="section-top-border">
+          <div id="agg_to_pick_primary" style="width: 100%; height: 600px; background-color: #FFFFFF;" ></div>
+          <p class="sample-text"><font size="2">A mapping of Total Champion Picks to those champions' average aggression levels.</font></p>
         </div>
       </div>
 
