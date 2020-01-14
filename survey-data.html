@@ -2437,9 +2437,10 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 							<ul class="nav navbar-nav menu_nav ml-auto">
-								<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+								<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
 								<!--<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
 								<li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>-->
+                <!--
 								<li class="nav-item submenu dropdown">
 									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
 									<ul class="dropdown-menu">
@@ -2447,7 +2448,7 @@
                     <li class="nav-item"><a class="nav-link" href="projects.html">Color-Based MoCap</a></li>
                     <li class="nav-item"><a class="nav-link" href="projects.html">Tournament Sim</a></li>
 									</ul>
-								</li>
+								</li>-->
 								<!--<li class="nav-item submenu dropdown">
 									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
 									<ul class="dropdown-menu">
@@ -2489,7 +2490,7 @@
 				<div class="container">
   					<h3 class="text-heading title_color">League of Legends Champion Select Assistant</h3>
   					<p class="sample-text">
-				      This project was done in collaboration with fellow University of Maryland Information Science Student <a href="">Ryan</a> at the University of Maryland and was made possible through the contributions of the various League of Legends subreddits and Discord channels. Our mission is to understand the thought process behind selecting a champion in League of Legends. We intend to use the statistics we gained here to make informed decisions for new players to help ease the tensions of a new players' starting to play ranked. None of our work is currently monetized and this is purely a passion project, any inquiries may be made to bkeplinger97@gmail.com. Our languages of choice has been Rust and Python, Python providing robust data manipulation tools and Rust offering a fast, thread-safe language which is easy to use. (Though I am slightly biased, given I'm a rustacean.)</br></br>
+				      This project was done in collaboration with fellow University of Maryland Information Science Student <a href="">Ryan</a> at the University of Maryland and was made possible through the contributions of the various League of Legends subreddits and Discord channels. Our mission is to understand the thought process behind selecting a champion in League of Legends. We intend to use the statistics we gained here to make informed decisions for new players to help ease the tensions of a new players' starting to play ranked. None of our work is currently monetized and this is purely a passion project, any inquiries may be made to leaguechampassist@gmail.com. Our languages of choice has been Rust and Python, Python providing robust data manipulation tools and Rust offering a fast, thread-safe language which is easy to use. (Though I am slightly biased, given I'm a rustacean.)</br></br>
   					</p>
             <p class="sample-text">
               From December 21st to December 30th, we posted to the various champion main subreddits, along with various personal and official League of Legends Discord channels. This was an overall success, and we accrued 4805 total responses. Of those, we had to throw away 104 responses due to trolling, duplicate data, or uncleanable data (saying marksman instead of a champion name, etc...), amounting to a 2.17% loss in data. We posted to 148 subreddits, though 3 posts were removed shortly after arriving. Our post to the Caitlyn, Senna, and Shen main subreddits were taken down for lack of direct connection to the champion. The Caitlyn main Subreddit very quickly reinstated the post, with about 3 hours of downtime while the Senna and Shen main Subreddits were never reinstated. The posts from the Senna and Shen subreddits were removed by the same moderator (how's that for impartial judgement), and there were no other useful moderators willing to help so we had to keep that in mind while examining this data. Below you will find our survey results.
@@ -2713,8 +2714,20 @@
               container: 'graph-container'
             });
           </script>-->
-        </div>
+          <h3 class="text-heading title_color">FAQ</h3>
+          <h3 class="mb-30 title_color">Why did we ask for your summoner name?</h3>
+          <p class="sample-text">That was mostly for verification, it saves us a lot of trouble if we can identify someone who double submitted data by their summoner name rather than guessing if two players share a very similar champion pool. Additionally, we were aware people could troll with a fake summoner name, but fortunately it seems most trolls didn't take time to make their answers look legitimate so a small script to check if their username exists on the given server made things so much easier to root through. We hold to our decision and think it helped increase our total number of responses.</br></br></p>
+          <h3 class="mb-30 title_color">Why not have people sign in to Google? Why is this so short? Why aren't the questions super detailed?</h3>
+          <p class="sample-text">We understand that some people were expecting a super in-depth survey where they can write an essay about how much they love playing Malphite, but fact of the matter is that the longer a survey is, or the more people have to think about their answers, the less likely they are to finish said survey and submit it. This ties in to the reason it's short and there was no google sign in required, as for every obstacle you put in someone's way, the less likely they are to finish the given task.</br></br></p>
+          <h3 class="mb-30 title_color">Why are you posting to X champion mains subreddits? Won't that skew your data?</h3>
+          <p class="sample-text">So we were initially concerned with not getting enough data and we came to a point where we said "If we post to one champion main subreddit, we need to post to all of them, but if we do post to all of them then we know we're getting enough data." We made the decision to post to every subreddit and achieved exactly what we meant to. Initial scanning of the data seems to show that even one tricks often had fall back champions and only a very small percentage would dodge, int, or troll regardless. Additionally there was concern with the size of each subreddit, and the total number of votes by subscribed members, but I think I have a way to account for this using the size of the subreddit at the time the survey was taken combined with an average 'Online' count from that subreddit.</br></br></p>
+          <h3 class="mb-30 title_color">What did you learn about creating and maintaining a survey?</h3>
+          <p class="sample-text">We learned a lot from making this survey. It was a first-time for both of us and using feedback from before should help our future endeavours. Specifically we learned:</br><b>1)</b> Make as many answers as possible preset. Reading over ~4700 individual comments is not my idea of a fun night.</br><b>2)</b> Ignore the haters. We got a lot of flak on various subreddits for "spam" and "not doing things right". We take feedback seriously but coming from people who have no idea what we're doing, it was frustrating.</br><b>3)</b> Sometimes you can't fix an issue before you send the survey out. It's OK, it happens, put out a notice and fix what you can, no one will mind.</br></br></p>
+          <h3 class="mb-30 title_color">What's next?</h3>
+          <p class="sample-text">Now we unfortunately must go dark, time for my friend and I to work on understanding all this data. We do not have a timeline as we both are University students and our semesters' can be hectic. We're hopeful to have a prototype by Mid-Summer, though of course we can't promise anything. I just wanted to give another big thank you to anyone who contributed to the survey or is interested in the project.</br></br></p>
+          <p class="sample-text">Any business inquiries can be sent to: leaguechampassist@gmail.com</p>
 
+        </div>
     </div>
 
 			<!-- End Sample Area -->
