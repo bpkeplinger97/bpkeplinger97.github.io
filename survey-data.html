@@ -2611,28 +2611,9 @@
         </div>
 
         <div class="section-top-border">
-<!--          <div id="sigma-container"></div>
-          <- Display gexf
-          <script src="sigma.js/build/sigma.min.js"></script>
-          <script src="sigma.js/build/plugins/sigma.parsers.gexf.min.js"></script>
 
-          <script>
-            sigma.parsers.gexf(
-              'relationship_map.gexf',
-              { // Here is the ID of the DOM element that
-                // will contain the graph:
-                container: 'sigma-container'
-              },
-              function(s) {
-                // This function will be executed when the
-                // graph is displayed, with "s" the related
-                // sigma instance.
-              }
-            );
-          </script>
-        -->
           <!-- START SIGMA IMPORTS -->
-          <!--
+
           <script src="sigma.js/src/sigma.core.js"></script>
           <script src="sigma.js/src/conrad.js"></script>
           <script src="sigma.js/src/utils/sigma.utils.js"></script>
@@ -2679,23 +2660,19 @@
           <script src="sigma.js/src/misc/sigma.misc.bindEvents.js"></script>
           <script src="sigma.js/src/misc/sigma.misc.bindDOMEvents.js"></script>
           <script src="sigma.js/src/misc/sigma.misc.drawHovers.js"></script>
-        -->
+
           <!-- END SIGMA IMPORTS -->
-          <!--
+
           <script src="sigma.js/plugins/sigma.parsers.gexf/gexf-parser.js"></script>
           <script src="sigma.js/plugins/sigma.parsers.gexf/sigma.parsers.gexf.js"></script>
 
           <div id="container">
               <style>
                 #graph-container {
-                  top: 0;
-                  bottom: 0;
-                  left: 0;
-                  right: 0;
-                  position: absolute;
+                  height: 500px;
                 }
               </style>
-              <div id="graph-container"></div>
+              <div id='graph-container'></div>
             </div>
             <script>
 
@@ -2713,7 +2690,9 @@
             sigma.parsers.gexf('relationship_map.gexf', {
               container: 'graph-container'
             });
-          </script>-->
+          </script>
+        </div>
+        <div class="section-top-border">
           <h3 class="text-heading title_color">FAQ</h3>
           <h3 class="mb-30 title_color">Why did we ask for your summoner name?</h3>
           <p class="sample-text">That was mostly for verification, it saves us a lot of trouble if we can identify someone who double submitted data by their summoner name rather than guessing if two players share a very similar champion pool. Additionally, we were aware people could troll with a fake summoner name, but fortunately it seems most trolls didn't take time to make their answers look legitimate so a small script to check if their username exists on the given server made things so much easier to root through. We hold to our decision and think it helped increase our total number of responses.</br></br></p>
