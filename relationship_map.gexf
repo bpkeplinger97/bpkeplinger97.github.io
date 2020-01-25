@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gephi.org/gexf" xmlns:viz="http://www.gephi.org/gexf/viz">
 
-<graph mode="static" defaultedgetype="directed">
+<graph mode="static">
 <nodes>
 <node id="0" label="Dodge" />
 <node id="1" label="Counter" />
