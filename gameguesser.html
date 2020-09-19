@@ -7,7 +7,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Welcome | Brandon Keplinger</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/linericon/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="vendors/animate-css/animate.css">
+    <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+    <link rel="stylesheet" href="vendors/flaticon/flaticon.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
 <style type="text/css">
     /*!
@@ -9129,15 +9146,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12519,7 +12536,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13033,14 +13050,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13071,6 +13088,46 @@ div#notebook {
     </script>
     <!-- End of mathjax configuration --></head>
 <body>
+<!--================Header Menu Area =================-->
+<header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container box_1620">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+      <ul class="nav navbar-nav menu_nav ml-auto">
+        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item submenu dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <ul class="dropdown-menu">
+            <li class="nav-item"><a class="nav-link" href="projects.html">Overview</a></li>
+            <li class="nav-item"><a class="nav-link" href="survey-data.html">League Assistant</a></li>
+            <li class="nav-item"><a class="nav-link" href="gameguesser.html">LoL Game Outcome Predictor</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">Color-Based MoCap</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">Tournament Sim</a></li>
+          </ul>
+        </li>
+        <!--<li class="nav-item submenu dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+          <ul class="dropdown-menu">
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+          </ul>
+        </li>-->
+        <!--<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>-->
+      </ul>
+    </div>
+  </div>
+      </nav>
+    </div>
+</header>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -13432,7 +13489,7 @@ Finally we grab the champion winrates we harvested from OP.GG and build a dictio
         <span class="c1"># Hey dum-dum, you forgot to filter by queue type!!!</span>
         <span class="c1"># And now you have no time to fix it!!!</span>
         <span class="c1"># :)</span>
-        
+
         <span class="c1"># Request someons list of matches and put it into a JSON body</span>
         <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;https://na1.api.riotgames.com/lol/match/v4/</span>
 <span class="s2">            matchlists/by-account/</span><span class="si">{}</span><span class="s2">?api_key=</span><span class="si">{}</span><span class="s2">&amp;beginTime=</span><span class="si">{}</span><span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">key</span><span class="p">,</span><span class="n">begin_time</span><span class="p">))</span>
@@ -13994,7 +14051,7 @@ n
 <div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">guess_only_winrates</span><span class="p">(</span><span class="n">winrate_map</span><span class="p">,</span><span class="n">champion_map</span><span class="p">,</span><span class="n">damage_types</span><span class="p">,</span><span class="n">conn</span><span class="p">,</span><span class="n">cursor</span><span class="p">,</span><span class="n">values</span><span class="p">):</span>    
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">guess_only_winrates</span><span class="p">(</span><span class="n">winrate_map</span><span class="p">,</span><span class="n">champion_map</span><span class="p">,</span><span class="n">damage_types</span><span class="p">,</span><span class="n">conn</span><span class="p">,</span><span class="n">cursor</span><span class="p">,</span><span class="n">values</span><span class="p">):</span>
     <span class="c1"># Keep track of times correct and the total number of guessed</span>
     <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
@@ -14017,7 +14074,7 @@ n
         <span class="c1"># Check against the known outcome</span>
         <span class="k">if</span> <span class="n">winner</span> <span class="o">==</span> <span class="n">guessed_winner</span><span class="p">:</span>
             <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-            
+
         <span class="n">total</span> <span class="o">+=</span> <span class="mi">1</span>
 
         <span class="c1">#print(&quot;&quot;&quot;On this pass we ended up with {} correct </span>
@@ -14047,7 +14104,7 @@ n
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">calculate_average_wr</span><span class="p">(</span><span class="n">winrate_map</span><span class="p">,</span><span class="n">team_1</span><span class="p">,</span><span class="n">team_2</span><span class="p">):</span>
     <span class="n">team_1_total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">team_2_total</span> <span class="o">=</span> <span class="mi">0</span>
-    
+
     <span class="c1"># Add the winrates up and divide by 5 (5 champions per team)</span>
     <span class="k">for</span> <span class="n">champion</span> <span class="ow">in</span> <span class="n">team_1</span><span class="p">:</span>
         <span class="n">used_winrate</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -14104,11 +14161,11 @@ n
     <span class="c1"># Select v games from our sample data</span>
     <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">output_graph_winrate</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
         <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM games ORDER BY random() LIMIT </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">v</span><span class="p">,)</span>
-        <span class="n">output</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>        
+        <span class="n">output</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
         <span class="n">values</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
         <span class="p">(</span><span class="n">correct</span><span class="p">,</span><span class="n">total</span><span class="p">)</span> <span class="o">=</span> <span class="n">guess_only_winrates</span><span class="p">(</span><span class="n">champions_winrates</span><span class="p">,</span><span class="n">champion_map</span><span class="p">,</span><span class="n">damage_map</span><span class="p">,</span><span class="n">sql</span><span class="p">,</span><span class="n">cursor</span><span class="p">,</span><span class="n">values</span><span class="p">)</span>
-        
+
         <span class="n">output_graph_winrate</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">100.0</span> <span class="o">*</span> <span class="n">correct</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
 
     <span class="n">times</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -14187,7 +14244,7 @@ n
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">ad_ap_value</span> <span class="o">=</span> <span class="mi">0</span>
-    
+
     <span class="c1"># Now we begin guessing</span>
     <span class="k">for</span> <span class="p">(</span><span class="n">gameId</span><span class="p">,</span><span class="n">winner</span><span class="p">,</span><span class="n">top1</span><span class="p">,</span><span class="n">jungle1</span><span class="p">,</span><span class="n">middle1</span><span class="p">,</span><span class="n">bottom1</span><span class="p">,</span><span class="n">support1</span><span class="p">,</span><span class="n">top2</span><span class="p">,</span><span class="n">jungle2</span><span class="p">,</span><span class="n">middle2</span><span class="p">,</span><span class="n">bottom2</span><span class="p">,</span><span class="n">support2</span><span class="p">)</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
         <span class="c1"># Build out our lists of teams</span>
@@ -14208,8 +14265,8 @@ n
         <span class="k">if</span> <span class="n">ad1</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">ap1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">ad_ap_value</span> <span class="o">-=</span> <span class="mi">2</span>
         <span class="k">if</span> <span class="n">ad2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">ap2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">ad_ap_value</span> <span class="o">+=</span> <span class="mi">2</span> 
-            
+            <span class="n">ad_ap_value</span> <span class="o">+=</span> <span class="mi">2</span>
+
 
         <span class="c1"># If our value is &gt; 0, team_1 should win, otherwise it&#39;s team_2</span>
         <span class="k">if</span> <span class="n">ad_ap_value</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -14219,7 +14276,7 @@ n
 
         <span class="k">if</span> <span class="n">winner</span> <span class="o">==</span> <span class="n">guessed_winner</span><span class="p">:</span>
             <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-            
+
         <span class="n">total</span> <span class="o">+=</span> <span class="mi">1</span>
 
         <span class="c1">#print(&quot;On this pass we ended up with {} correct out of {} for a correct percentage of {}&quot;.format(correct,total,100.0 * correct/total))</span>
@@ -14288,11 +14345,11 @@ n
 <span class="k">while</span> <span class="n">times</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">output_graph_ad_ap</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
         <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM games ORDER BY random() LIMIT </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">v</span><span class="p">,)</span>
-        <span class="n">output</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>        
+        <span class="n">output</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
         <span class="n">values</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
         <span class="p">(</span><span class="n">correct</span><span class="p">,</span><span class="n">total</span><span class="p">)</span> <span class="o">=</span> <span class="n">guess_only_ad_ap</span><span class="p">(</span><span class="n">champions_winrates</span><span class="p">,</span><span class="n">champion_map</span><span class="p">,</span><span class="n">damage_map</span><span class="p">,</span><span class="n">sql</span><span class="p">,</span><span class="n">cursor</span><span class="p">,</span><span class="n">values</span><span class="p">)</span>
-        
+
         <span class="n">output_graph_ad_ap</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">100.0</span> <span class="o">*</span> <span class="n">correct</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
 
     <span class="n">times</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -14453,13 +14510,13 @@ n
 
     <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-    
+
     <span class="n">x_values_wr</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># This is x_j for winrates</span>
     <span class="n">x_values_ad_ap</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># This is x_j for ad_ap</span>
     <span class="n">sigma_wr_calculated</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># This is sigma(z(x)) for winrates</span>
     <span class="n">sigma_ad_ap_calculated</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># This is sigma(z(x)) for ad_ap</span>
     <span class="n">winners</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># This is essentially y</span>
-    
+
     <span class="c1"># Now we begin guessing</span>
     <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,(</span><span class="n">gameId</span><span class="p">,</span><span class="n">winner</span><span class="p">,</span><span class="n">top1</span><span class="p">,</span><span class="n">jungle1</span><span class="p">,</span><span class="n">middle1</span><span class="p">,</span>
             <span class="n">bottom1</span><span class="p">,</span><span class="n">support1</span><span class="p">,</span><span class="n">top2</span><span class="p">,</span><span class="n">jungle2</span><span class="p">,</span><span class="n">middle2</span><span class="p">,</span><span class="n">bottom2</span><span class="p">,</span><span class="n">support2</span><span class="p">))</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
@@ -14494,7 +14551,7 @@ n
         <span class="k">if</span> <span class="n">ad1</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">ap1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">ad_ap_value</span> <span class="o">-=</span> <span class="mi">2</span>
         <span class="k">if</span> <span class="n">ad2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">ap2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">ad_ap_value</span> <span class="o">+=</span> <span class="mi">2</span> 
+            <span class="n">ad_ap_value</span> <span class="o">+=</span> <span class="mi">2</span>
 
         <span class="n">x_values_ad_ap</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ad_ap_value</span><span class="p">)</span>
 
@@ -14518,7 +14575,7 @@ n
         <span class="k">if</span> <span class="n">guessed_val</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">guessed_winner</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">guessed_winner</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>    
+            <span class="n">guessed_winner</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 
         <span class="k">if</span> <span class="n">winner</span> <span class="o">==</span> <span class="n">guessed_winner</span><span class="p">:</span>
             <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -14539,7 +14596,7 @@ n
 
     <span class="n">times</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="n">guessed_rates</span> <span class="o">+=</span> <span class="n">correct</span> <span class="o">/</span> <span class="n">total</span>
-        
+
     <span class="k">return</span> <span class="p">(</span><span class="n">correct</span><span class="p">,</span><span class="n">total</span><span class="p">,</span><span class="n">winrate_weight</span><span class="p">,</span><span class="n">ad_ap_weight</span><span class="p">,</span><span class="n">learning_rate</span><span class="p">)</span>
 </pre></div>
 
@@ -14573,14 +14630,14 @@ n
 <span class="k">while</span> <span class="n">times</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">output_graph_trained</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
         <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM games ORDER BY random() LIMIT </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">v</span><span class="p">,)</span>
-        <span class="n">output</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>        
+        <span class="n">output</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
         <span class="n">values</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
         <span class="p">(</span><span class="n">correct</span><span class="p">,</span><span class="n">total</span><span class="p">,</span><span class="n">winrate_weight</span><span class="p">,</span><span class="n">ad_ap_weight</span><span class="p">,</span><span class="n">learning_rate</span><span class="p">)</span> <span class="o">=</span> <span class="n">guess_with_training</span><span class="p">(</span><span class="n">champions_winrates</span><span class="p">,</span><span class="n">champion_map</span><span class="p">,</span><span class="n">damage_map</span><span class="p">,</span><span class="n">sql</span><span class="p">,</span><span class="n">cursor</span><span class="p">,</span><span class="n">values</span><span class="p">,</span><span class="n">winrate_weight</span><span class="p">,</span><span class="n">ad_ap_weight</span><span class="p">,</span><span class="n">learning_rate</span><span class="p">)</span>
         <span class="c1">#print(&quot;%d %d %.2f&quot; %(correct,total, 100.0 * correct / total))</span>
         <span class="c1">#print(&quot;%.2f %.2f&quot; %(wr_weight,ad_ap_weight))</span>
         <span class="n">output_graph_trained</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">100.0</span> <span class="o">*</span> <span class="n">correct</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
         <span class="c1">#print(v)</span>
-        
+
     <span class="n">times</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 
@@ -14911,7 +14968,7 @@ n
   </div>
 </body>
 
- 
+
 
 
 </html>
